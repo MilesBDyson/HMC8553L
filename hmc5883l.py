@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# vim: set fileencoding=UTF-8 :
 
 # HMC5888L Magnetometer (Digital Compass) wrapper class
 # Based on https://bitbucket.org/thinkbowl/i2clibraries/src/14683feb0f96,
@@ -24,7 +23,7 @@ class hmc5883l:
         8.10: [7, 4.35],
     }
 
-    def __init__(self, port=1, address=0x1E, gauss=1.3, declination=(0,0)):
+    def __init__(self, port=2, address=0x1E, gauss=1.3, declination=(0,0)):
         self.bus = smbus.SMBus(port)
         self.address = address
 
